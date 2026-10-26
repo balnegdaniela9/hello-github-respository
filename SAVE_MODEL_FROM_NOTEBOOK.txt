@@ -1,0 +1,22 @@
+IMPORTANT: The application needs the actual fitted model from your midterm notebook.
+Do not create an empty file named trained_model.joblib.
+
+1. Open your original `ipynb notebook(2).ipynb` in Google Colab or Jupyter.
+2. Upload the same dataset used for the midterm.
+3. Run the notebook cells in order until the cell that trains `decision_tree` has completed successfully.
+4. In a new cell, run:
+
+import os
+import joblib
+
+os.makedirs("models", exist_ok=True)
+joblib.dump(decision_tree, "trained_model.joblib")
+print("Saved fitted pipeline.")
+
+5. Download `trained_model.joblib` from the notebook file panel.
+6. Copy it into this project's `models` folder. Final location:
+   Student_Service_Request_Monitoring_System/models/trained_model.joblib
+
+The notebook and app must use compatible scikit-learn versions. If loading fails because of a version mismatch, install a compatible scikit-learn version matching the notebook environment, then export again.
+
+The pipeline uses the nine intake-time predictors listed in README.md. Do not use Processing_Days, Status, Reopened, Satisfaction_Score, or Request_ID as prediction features.
